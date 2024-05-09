@@ -22,6 +22,16 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - name: Print npm version
+      run: npm --version
+    - name: Clear npm cache
+      run: npm cache clean --force
+    - name: Debug
+      run: |
+        cd website
+        ls -la
+        cat package.json
+
     - name: Install dependencies
       run: |
         cd website

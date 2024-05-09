@@ -31,7 +31,7 @@ jobs:
     - name: Install dependencies
       run: |
         cd website
-        npm ci
+        npm i
     - name: Build the app
       run: |
         cd website

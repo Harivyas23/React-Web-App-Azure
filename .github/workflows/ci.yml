@@ -28,7 +28,6 @@ jobs:
         cache: 'npm'
     - name : Install dependencies
       run: |
-          cd website
           npm ci
     - name : Build the app
       run: |

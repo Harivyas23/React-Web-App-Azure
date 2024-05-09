@@ -28,17 +28,18 @@ jobs:
         cache: 'npm'
     - name : Install dependencies
       run: |
-          npm ci
+        cd website
+        npm ci
     - name : Build the app
       run: |
-          cd website
-          npm run build
+        cd website
+        npm run build
     - name : Run the component test
       run: |
-          cd website
-          npm test
+        cd website
+        npm test
     - name : Start the app
       run: |
-          cd website
-          npm start &
-          npx wait-on --timeout 60000
+        cd website
+        npm start &
+        npx wait-on --timeout 60000
